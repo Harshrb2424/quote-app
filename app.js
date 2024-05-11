@@ -11,6 +11,7 @@ const pool = new Pool({
     port: 2424
 });
 
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', async (req, res) => {

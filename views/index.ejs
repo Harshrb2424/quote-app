@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quote Website</title>
+    <title>Quotes</title>
+    <link rel="stylesheet" href="style.css">
+
     <style>
         textarea {
             width: 100%;
@@ -31,7 +33,7 @@
     <h2>Quotes</h2>
     <ul>
         <% quotes.forEach(quote => { %>
-            <li><%= quote["quote"] %> - <%= quote["author"]=="" ? "Unknow" : quote["author"] %></li>
+            <li><%= quote["quote"] %> - <em><%= quote["author"]=="" ? "Unknow" : quote["author"] %></em></li>
         <% }); %>
     </ul>
 
