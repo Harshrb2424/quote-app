@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', async (req, res) => {
     try {
         const client = await pool.connect();
-        const result = await client.query('SELECT * FROM quotes');
+        const result = await client.query('SELECT * FROM quotes ORDER BY date DESC NULLS LAST;');
         const quotes = result.rows;
         client.release();
         res.render('index', { quotes });
@@ -31,7 +31,11 @@ app.post('/add', async (req, res) => {
     console.log(req.body);
     try {
         const client = await pool.connect();
-        await client.query('INSERT INTO quotes (quote,author,date) VALUES ($1, $2, $3)', [quote, author, date]);
+        if (date == "") {
+            await client.query('INSERT INTO quotes (quote,author) VALUES ($1, $2)', [quote, author]);
+        } else {
+            await client.query('INSERT INTO quotes (quote,author,date) VALUES ($1, $2, $3)', [quote, author, date]);
+        }
         client.release();
         res.redirect('/');
     } catch (err) {

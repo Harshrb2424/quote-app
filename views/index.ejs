@@ -15,15 +15,15 @@
     <h1>Quote Website</h1>
 
     <h2>Add Quote</h2>
-    <form action="/add" method="post">
+    <form id="quoteForm" action="/add" method="post">
         <label for="quote">Quote:</label><br>
         <textarea name="quote" id="quote" placeholder="Enter your quote" required></textarea><br>
 
         <label for="author">Author:</label><br>
-        <input type="text" name="author" id="author" placeholder="Enter the author's name" required><br>
+        <input type="text" name="author" id="author" placeholder="Enter the author's name"><br>
 
         <label for="date">Date:</label><br>
-        <input type="date" name="date" id="date" required><br>
+        <input type="date" name="date" id="date"><br>
 
         <button type="submit">Add</button>
     </form>
@@ -31,8 +31,51 @@
     <h2>Quotes</h2>
     <ul>
         <% quotes.forEach(quote => { %>
-            <li><%= quote["quote"] %> - <%= quote["author"] %> (<%= quote["date"] %>)</li>
+            <li><%= quote["quote"] %> - <%= quote["author"]=="" ? "Unknow" : quote["author"] %></li>
         <% }); %>
     </ul>
+
+    <script>
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function fillFormFields() {
+            var author = getCookie('author');
+            var date = getCookie('date');
+            if (author) {
+                document.getElementById('author').value = author;
+            }
+            if (date) {
+                document.getElementById('date').value = date;
+            }
+        }
+
+        window.onload = function () {
+            fillFormFields();
+        };
+
+        document.getElementById('quoteForm').addEventListener('submit', function (event) {
+            document.getElementById('author').value=="" || setCookie('author', document.getElementById('author').value, 7); // Store for 7 days
+            document.getElementById('date').value=="" || setCookie('date', document.getElementById('date').value, 7); // Store for 7 days
+        });
+    </script>
 </body>
 </html>
