@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quotes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
         textarea {
@@ -16,7 +17,7 @@
 <body>
     <h1>Quote Website</h1>
 
-    <h2>Add Quote</h2>
+    <h2 id="addQuote">Add Quote</h2>
     <form id="quoteForm" action="/add" method="post">
         <label for="quote">Quote:</label><br>
         <textarea name="quote" id="quote" placeholder="Enter your quote" required></textarea><br>
@@ -75,8 +76,15 @@
         };
 
         document.getElementById('quoteForm').addEventListener('submit', function (event) {
-            document.getElementById('author').value=="" || setCookie('author', document.getElementById('author').value, 7); // Store for 7 days
-            document.getElementById('date').value=="" || setCookie('date', document.getElementById('date').value, 7); // Store for 7 days
+            setCookie('author', document.getElementById('author').value, 7); // Store for 7 days
+            setCookie('date', document.getElementById('date').value, 7); // Store for 7 days
+        });
+
+        $(document).ready(function(){
+            $("#addQuote").click(function(){
+                $("#addQuote").css('opacity', '1');
+                $("#quoteForm").fadeIn();
+            });
         });
     </script>
 </body>
