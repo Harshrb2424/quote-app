@@ -2,6 +2,8 @@
 
 This is a simple quote website where users can add quotes along with the author's name and date. The quotes are displayed on the website for viewing.
 
+[View Preview: https://harshrb2424.github.io/quote-app](https://harshrb2424.github.io/quote-app)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
