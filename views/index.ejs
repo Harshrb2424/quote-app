@@ -35,7 +35,7 @@
     <ul>
         <% quotes.forEach(quote => { %>
             <% console.log(quote["date"]); %>
-            <li><%= quote["quote"] %> - <em><%= quote["author"]=="" ? "Unknow" : quote["author"] %></em> <span><%= quote["date"]==null ? "" : new Date(quote["date"]).toLocaleString('default', { month: 'short' })+" "+ new Date(quote["date"]).getDate() +" "+ new Date(quote["date"]).getFullYear() %></span></li>
+            <li><%= quote["quote"] %> - <em><%= quote["author"]=="" ? "Unknown" : quote["author"] %></em> <span><%= quote["date"]==null ? "" : new Date(quote["date"]).toLocaleString('default', { month: 'short' })+" "+ new Date(quote["date"]).getDate() +" "+ new Date(quote["date"]).getFullYear() %></span></li>
         <% }); %>
     </ul>
 
