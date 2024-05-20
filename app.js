@@ -4,20 +4,20 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 require('dotenv').config();
-// const pool = new Pool({
-//     user: 'postgres',
-//     host: 'localhost',
-//     database: 'postgres',
-//     password: '2424',
-//     port: 2424
-// });
 const pool = new Pool({
-    user: process.env.POSTGRESQL_ADDON_USER,
-    host: process.env.POSTGRESQL_ADDON_HOST,
-    database: process.env.POSTGRESQL_ADDON_DB,
-    password: process.env.POSTGRESQL_ADDON_PASSWORD,
-    port: parseInt(process.env.POSTGRESQL_ADDON_PORT)
+    user: 'postgres',
+    host: 'localhost',
+    database: 'postgres',
+    password: '2424',
+    port: 2424
 });
+// const pool = new Pool({
+//     user: process.env.POSTGRESQL_ADDON_USER,
+//     host: process.env.POSTGRESQL_ADDON_HOST,
+//     database: process.env.POSTGRESQL_ADDON_DB,
+//     password: process.env.POSTGRESQL_ADDON_PASSWORD,
+//     port: parseInt(process.env.POSTGRESQL_ADDON_PORT)
+// });
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
