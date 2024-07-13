@@ -1,780 +1,1037 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quotes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./public/style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
-        textarea {
-            width: 100%;
-            height: 100px;
-        }
+      textarea {
+        width: 100%;
+        height: 100px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Quote Website</h1>
 
     <h2 id="addQuote">Add Quote</h2>
     <form id="quoteForm" action="/add" method="post">
-        <label for="quote">Quote:</label><br>
-        <textarea name="quote" id="quote" placeholder="Enter your quote" required></textarea><br>
+      <label for="quote">Quote:</label><br />
+      <textarea
+        name="quote"
+        id="quote"
+        placeholder="Enter your quote"
+        required
+      ></textarea
+      ><br />
 
-        <label for="author">Author:</label><br>
-        <input type="text" name="author" id="author" placeholder="Enter the author's name"><br>
+      <label for="author">Author:</label><br />
+      <input
+        type="text"
+        name="author"
+        id="author"
+        placeholder="Enter the author's name"
+      /><br />
 
-        <label for="date">Date:</label><br>
-        <input type="date" name="date" id="date"><br>
+      <label for="date">Date:</label><br />
+      <input type="date" name="date" id="date" /><br />
 
-        <button type="submit">Add</button>
+      <button type="submit">Add</button>
     </form>
 
     <h2>Quotes</h2>
     <ul>
-        
-            
-            <li>A life is a tragedy in close up, and a comedy in long short. - <em>Charlie Chaplin</em> <span>Jun 30 2024</span></li>
-        
-            
-            <li>hamko neechay utar laingy log
-ishq latka rahayga pankhay pe - <em>ZIA Mashkoor</em> <span>Jun 28 2024</span></li>
-        
-            
-            <li>&#34; When I got enough confidence, the stage was gone.. When I was sure of Losing, I won.When I needed People the most, they Left me. When I learnt to dry my Tears, I found a shoulder to Cry on. When I mastered the Skill of Hating, Someone started Loving me from the core of the Heart. And, while waiting for Light for Hours when I fell asleep, the Sun came out.. That’s LIFE!! No matter what you Plan, you never know what Life has Planned for you Success introduces you to the World. But Failure introduces the World to you. Always be Happy!! Often when we lose Hope and think this is the end God smiles from above and says, “Relax Sweetheart; It’s just a Bend, not the End..!&#34;” - <em>William Shakespeare</em> <span>Jun 25 2024</span></li>
-        
-            
-            <li>Your confidence isn&#39;t other people. Your confidence is your bad habits, your distractions, your insecurities, your procrastinations, your lack of discipline, your fear, and your ego. - <em>Unknown</em> <span>Jun 24 2024</span></li>
-        
-            
-            <li>Wo mili ese jese kabhi dur nahi hogi
-Aur dur ese hui jese kabhi mili hi nahi - <em>Unknown</em> <span>Jun 12 2024</span></li>
-        
-            
-            <li>and I thought I was your forever. - <em>Arctic Monkeys</em> <span>Jun 6 2024</span></li>
-        
-            
-            <li>Do you think I have forgotten about you? - <em>The 1975</em> <span>Jun 6 2024</span></li>
-        
-            
-            <li>Always smiled, but was I happy inside? - <em>Kanya West</em> <span>Jun 6 2024</span></li>
-        
-            
-            <li>It hurts to love you but I still love you. - <em>Lana Del Rey</em> <span>Jun 6 2024</span></li>
-        
-            
-            <li>dil roya per aankhon
-ko rone na diya.
-saari saari raat jage khud
-ko sone na diya.
-itna kartey hai yaad
-aap ko.
-par is baat ka ehsas aap ko kabhi hone na diya!! - <em>Unknown</em> <span>Jun 4 2024</span></li>
-        
-            
-            <li>Emotions are always valid. But behavior is not. - <em>neethika</em> <span>Jun 3 2024</span></li>
-        
-            
-            <li>aur jab pasand ki cheez hi na mile
-phir chahe jo mil jaye
-kya farak padhta hai - <em>Unknown</em> <span>Jun 3 2024</span></li>
-        
-            
-            <li>Everything you love is very likely to be lost. But, In the end, Love will return in a different way. - <em>Krafka</em> <span>Jun 1 2024</span></li>
-        
-            
-            <li>I can love only what I can place so high above me that I cannot reach it. - <em>Krafka</em> <span>Jun 1 2024</span></li>
-        
-            
-            <li>Anyone who keeps the ability to see beauty never grows old. - <em>Krafka</em> <span>Jun 1 2024</span></li>
-        
-            
-            <li>You are in my heart, you shall be in there forever. My greatest wish is that you are happy you think of me. I am, when I think of you. - <em>Unknown</em> <span>May 31 2024</span></li>
-        
-            
-            <li>You must have chaos within  you to give birth to a dancing star. - <em>Friedrich Nietzsche</em> <span>May 30 2024</span></li>
-        
-            
-            <li>Wo mili ese jese kabhi dur nahi hogi
-Aur dur ese hui jese kabhi mili hi nahi - <em>Unknown</em> <span>May 29 2024</span></li>
-        
-            
-            <li>If you are kind, people may accuse you of selfish, ulterior motives. Be kind anyway.
-What you spend years building, someone can destroy overnight. Build anyway.
-The good you do today, people will often forget tomorrow. Do good anyway.
-Give the world the the best you have and it may never be enough. Give the world the best you&#39;ve got anyway. - <em>orphanage in Calcutta, India.</em> <span>May 20 2024</span></li>
-        
-            
-            <li>You always have the right to have no opinion about this. You can always think nothing about this. - <em>Aurelius</em> <span>May 18 2024</span></li>
-        
-            
-            <li>A man can be himself only so long as he is alone, and if he does not love solitude, he will not love freedom, for it is only when he is alone that he is really free. - <em>Arthur Schopenhauer</em> <span>May 18 2024</span></li>
-        
-            
-            <li>I wasn&#39;t ready for the mud after the rain of your love. - <em>Unknown</em> <span>May 18 2024</span></li>
-        
-            
-            <li>If you want to be beautiful, make beautiful choices. - <em>Epictetus</em> <span>May 18 2024</span></li>
-        
-            
-            <li>We suffer more in imagination than reality. - <em>Seneca</em> <span>May 18 2024</span></li>
-        
-            
-            <li>We love ourselves more than other people but for some reason, we care about their opinions more than our own. - <em>Marcus Aurelius</em> <span>May 18 2024</span></li>
-        
-            
-            <li>You have 2 ears but only one mouth for a reason. - <em>Zeno</em> <span>May 18 2024</span></li>
-        
-            
-            <li>I don&#39;t regret you but sometimes I wish I had walked away at the start and left things to hello. because I let you become my happiness and that&#39;s where I went wrong. - <em>Unknown</em> <span>May 15 2024</span></li>
-        
-            
-            <li>Everybody wants peace, Everybody wants peace until they realize that peace means you changing your tone when someone irritates you. No longer making everything an argument. Listening before responding. Setting your boundaries high and understanding that everyone has their boundaries too. Sone of you: you don&#39;t want to be in peace because to be in peace means giving it to others. - <em>Unknown</em> <span>May 12 2024</span></li>
-        
-            
-            <li>You pulled me away from my own heart,
-Replaced it with your own.
-You wrecked and recreated me.
-I will forever be yours,
-But you will never be mine.
-
-I am just another art piece on the wall,
-In your museum.
-Waiting to be admired by your eyes. - <em>Feeling This Way - Ben Esqueda</em> <span>May 12 2024</span></li>
-        
-            
-            <li>Father forgive them for they do not know what they are doing. - <em>Luke 23:24</em> <span>May 11 2024</span></li>
-        
-            
-            <li>True love keeps no record of wrongs. - <em>Unknown</em> <span>May 11 2024</span></li>
-        
-            
-            <li>If one has a complaint against another forgiving each other as the Lord has forgiven you, you also must forgive. - <em>Colossians 3:13</em> <span>May 11 2024</span></li>
-        
-            
-            <li>Sometimes I wonder why the universe let me met you.
-Why did it gave me the chance to feel you presence.
-To know you, understand you, and fall for you.
-Even though in the end, I know you will be the reason for my biggest sorrow.
-I mean, how can the universe be so cruel?
-Why would it gave me access to unrequited feelings? - <em>A Story of Unrequited Love</em> <span>May 11 2024</span></li>
-        
-            
-            <li>you should&#39;ve left me alone if I wasn&#39;t what you wanted.
-How stupid of me was it to think that you actually saw something in me?
-Taking to someone every single day for hours can be pretty distractive because there will come a day where you don&#39;t speak at all, and it&#39;s going to be the loneliest feeling in the world.
-that was pointless we could&#39;ve just stayed strangers. - <em>dyingful</em> <span>May 11 2024</span></li>
-        
-            
-            <li>You&#39;ll keep forgetting the one you love till you hate them. - <em>Unknown</em> <span>May 10 2024</span></li>
-        
-            
-            <li>I grieve and they blame me without knowing my reasons, like it was my choice to feel this deep sorrow. - <em>Unknown</em> <span>May 10 2024</span></li>
-        
-            
-            <li>How much do I have to wait for you to find me? - <em>Unknown</em> <span>May 10 2024</span></li>
-        
-            
-            <li>Truly, the grief you left me with is more loyal that you. - <em>Unknown</em> <span>May 10 2024</span></li>
-        
-            
-            <li>People change when they hurt enough they have to, when they see enough they&#39;re inspired to, when they see learn enough that they want to, and when they receive enough that they&#39;re able to. - <em>John C. Maxwell</em> <span>May 9 2024</span></li>
-        
-            
-            <li>I learned that people can easily forget that others are human - <em>Stanford Prison Experiment (1971)</em> <span>May 5 2024</span></li>
-        
-            
-            <li>It&#39;s exciting when you find parts of yourself in someone else. - <em>Annaka Silvia</em> <span>May 5 2024</span></li>
-        
-            
-            <li>Because in the end you are really alone, whatever you do. - <em>Marina Abramovie</em> <span>May 5 2024</span></li>
-        
-            
-            <li>There is an aching void in my heart which I am convinced the world can never fill. - <em>Unknown</em> <span>May 5 2024</span></li>
-        
-            
-            <li>To whom do I owe the biggest apology? No one&#39;s been crueler than I&#39;ve been to me. - <em>&#34;Sorry to Myself&#34;, Under Rug Swept</em> <span>May 5 2024</span></li>
-        
-            
-            <li>You need to learn to be last to speak. - <em>Unknown</em> <span>May 4 2024</span></li>
-        
-            
-            <li>all of man&#39;s problems arise because he cannot sit by himself in a room for thirty minutes alone. - <em>Naval</em> <span>May 3 2024</span></li>
-        
-            
-            <li>Tum yed nahi karty,
-Aur ham bhula nahi sakty.
-Tum hasa nahi sakty,
-Hum rola nahi sakty.
-Itni khubsurat Muhabbat hy hamari
-kh tum jan nahi sakty,
-Aur ham bata nahi sakty. - <em>Unknown</em> <span>May 3 2024</span></li>
-        
-            
-            <li>I challenge you.
-To be as kind as you can, for as long as you can.
-To be as grateful as you can, for as long as you can.
-To be as positive as you can, for as long as you can.
- - <em>Unknown</em> <span>Apr 29 2024</span></li>
-        
-            
-            <li>If you don&#39;t know what to live, then just live for me.
-The very existence of someone in the world is hope. - <em>Hua Cheng</em> <span>Apr 22 2024</span></li>
-        
-            
-            <li>An Intelligent person knows just exactly how Intelligent they are and what they do not know. - <em>Prakhar Gupta</em> <span>Apr 15 2024</span></li>
-        
-            
-            <li>If she&#39;s amazing, she won&#39;t be easy. If she&#39;s easy, she won&#39;t be amazing. If she&#39;s worth it, you won&#39;t give up,. If you give up, Your not worthy.
-Truth is, everyone is going to hurt you, you just have to find the one worth hurting for. - <em>Unknown</em> <span>Apr 11 2024</span></li>
-        
-            
-            <li>Sirf itna pyar kat jitna tu seh sakey.
-Bachna bhi padey to Zinda reh sakey. - <em>Unknown</em> <span>Apr 11 2024</span></li>
-        
-            
-            <li>Wisdom says I am nothing.
-Love says I am everything.
-And it&#39;s between these two that my life flows. - <em>Indian sage, Sri Nisargadatta Maharaj</em> <span>Apr 9 2024</span></li>
-        
-            
-            <li>We most all suffer from two pains: the pain of discipline or the pain of regret. - <em>Jim Rohn</em> <span>Apr 7 2024</span></li>
-        
-            
-            <li>You are the average of the five persons you spend the most time with. - <em>Jim Rohn</em> <span>Apr 7 2024</span></li>
-        
-            
-            <li>Perfectionism is a disease. Procrastination is a disease. ACTION is the cure. - <em>Richie Norton</em> <span>Apr 7 2024</span></li>
-        
-            
-            <li>Being alone is much worse than getting hurt. - <em>Loffy</em> <span>Apr 2 2024</span></li>
-        
-            
-            <li>Have a mind that is open to everything.....
-and attached to nothing. - <em>Unknown</em> <span>Apr 2 2024</span></li>
-        
-            
-            <li>We leave doors open for people who&#39;ll never knock again. Stubborn human heart. Living for the maybes and what ifs. Hoping until the day it dies. - <em>Unknown</em> <span>Feb 2 2024</span></li>
-        
-            
-            <li>I didn&#39;t fall for you. I looked down, saw the distance, and I jumped. - <em>Blake Auden</em> <span>Feb 2 2024</span></li>
-        
-            
-            <li>Maybe, forever was a word meant for memories and not people. - <em>Unknown</em> <span>Feb 1 2024</span></li>
-        
-            
-            <li>Lets heal so we can stop accidentally hurting people we want to love because we are projecting our own wounds on to them - <em>Steph Feels</em> <span>Feb 1 2024</span></li>
-        
-            
-            <li>Alfaaz mein kahan aati hai dil ki khaifiyat,
-Mehsoos jo hota hai, btaya nhi jata. - <em>Unknown</em> <span>Jan 21 2024</span></li>
-        
-            
-            <li>Nobody agrees but friendships are more twisted than romance. Romance gives you right, romance gives you authority, your lover is just yours by oath. That&#39;s not how it goes between two people who lives on convenience not desperation. - <em>Unknown</em> <span>Jan 21 2024</span></li>
-        
-            
-            <li>When you come back you will not be you. And I may not be I. - <em>EM Forster</em> <span>Jan 20 2024</span></li>
-        
-            
-            <li>reset, restart, refocus. - <em>Unknown</em> <span>Jan 18 2024</span></li>
-        
-            
-            <li>Not a single person has tried to fight for me to stay in their life, yet I fought for everyone I lost. This is my pain. - <em>Unknown</em> <span>Dec 25 2023</span></li>
-        
-            
-            <li>A focused fool can accomplish more than a distracted genius. - <em>Unknown</em> <span>Dec 24 2023</span></li>
-        
-            
-            <li>Holding that 1% hope. - <em>Unknown</em> <span>Dec 24 2023</span></li>
-        
-            
-            <li>The wiser you are, the more worries you have.
-The more you have, the more it hurts. - <em>Ecclesiastes 1:18</em> <span>Dec 2 2023</span></li>
-        
-            
-            <li>I&#39;m paradoxical.
-I like to be happy but I think about sad things all the time. I don&#39;t really like myself but I love the person I&#39;ve become.
-I say I don&#39;t care but I just care too much, deep into my bones. 
-I crave attention yet I  reject everything that comes my way. 
-I healed people, but I broke my own heart trying to fix them. 
-I love to listen, but I never tell them what&#39;s inside me.
-A living contradiction. That&#39;s what I am. - <em>Unknown</em> <span>Nov 22 2023</span></li>
-        
-            
-            <li>Hum baney he thy tabaah hone ko,
-Tera milna to aek bahana tha. - <em>Jaun Elia</em> <span>Nov 22 2023</span></li>
-        
-            
-            <li>As long as you&#39;ve got me. I&#39;ve got you. - <em>Unknown</em> <span>Nov 22 2023</span></li>
-        
-            
-            <li>Love is patient, love is kind. It does not envy, it does not boast, it is not proud. It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. Love does not delight in evil but rejoices with the truth. It always protects, always trusts, always hopes, always perseveres. - <em>Unknown</em> <span>Nov 20 2023</span></li>
-        
-            
-            <li>Almost dead yesterday, maybe dead tomorrow, but alive, gloriously alive, today. - <em>Robert Jordan</em> <span>Nov 20 2023</span></li>
-        
-            
-            <li>The most beautiful things in life are not things. They&#39;re people, places and memories. - <em>Unknown</em> <span>Nov 20 2023</span></li>
-        
-            
-            <li>Sometimes all you need is twenty seconds of insane courage, just literally twenty seconds of embarrassing bravery. And I promise you, something great will come of it. - <em>Unknown</em> <span>Nov 16 2023</span></li>
-        
-            
-            <li>And tonight, I guess, I miss you.
-But please don&#39;t ask me why.
-I&#39;ve tried to kill the feeling, but it doesn&#39;t want to die. - <em>Lauren Levi</em> <span>Nov 16 2023</span></li>
-        
-            
-            <li>People want to be acknowledged, accepted, and appreciated. It takes almost nothing to give them that, but empires have risen and fell because of it. People will be so happy that you&#39;ve given it, even if they know they&#39;re being manipulated, they&#39;ll ignore the manipulation for the sake of what you&#39;re giving them. - <em>Unknown</em> <span>Nov 15 2023</span></li>
-        
-            
-            <li>Might take you 6 more months, might take-you 2 more years, might take you 5, you&#39;re going to get it done. You&#39;re going to get where you want to be. - <em>Unknown</em> <span>Nov 9 2023</span></li>
-        
-            
-            <li>To the girls who dream of meeting a prince but end up falling for the misunderstood villain. - <em>Unknown</em> <span>Nov 8 2023</span></li>
-        
-            
-            <li>The Attack on Titan chapters are 139 because 120 in Japan is the number for freedom, this means Eren will never reach it. - <em>Unknown</em> <span>Nov 7 2023</span></li>
-        
-            
-            <li>In her mind, he was dead.
-In his, she was the reason to keep going. - <em>Unknown</em> <span>Nov 6 2023</span></li>
-        
-            
-            <li>I&#39;ve said it before and will say it again. You can seem like a millionaire to one person and a homeless person to the next. The ants think you are a giant and the trees don&#39;t even notice you. You think you have a boring life, but the next person might be striving for your lifestyle. Comparison is the thief of joy so just stay kind and keep living life. Life is all just a big game of perspective - <em>Unknown</em> <span>Nov 4 2023</span></li>
-        
-            
-            <li>Trust me when I say be the person who cares. Be the person who makes the effort, the person who loves without hesitation. Be the person who shows up for others. Because there is nothing stronger than someone who continues to show kindness in a world that hasn&#39;t always been kind to them. - <em>Unknown</em> <span>Nov 3 2023</span></li>
-        
-            
-            <li>Be honest when trouble comes, be simple when money comes, be humble when you get authority, and be calm when angry, this is called management of life. - <em>Lord Krishna</em> <span>Nov 3 2023</span></li>
-        
-            
-            <li>you&#39;re that &#34;nothing&#34; when people ask me what I&#39;m thinking about. - <em>akhira</em> <span>Oct 24 2023</span></li>
-        
-            
-            <li>Humble enough to know I can be replaced, but wise enough to know ain&#39;t nobody else like me. - <em>Unknown</em> <span>Oct 23 2023</span></li>
-        
-            
-            <li>There is no shame in being hungry for another person. There is no shame in wanting very much to share your life with somebody. - <em>Augusten Burroughs</em> <span>Oct 23 2023</span></li>
-        
-            
-            <li>It&#39;s not about silence. It&#39;s about the meaning in words.
-Days will pass anyway, the issue lies in the nights. - <em>Wajid shaikh</em> <span>Oct 23 2023</span></li>
-        
-            
-            <li>Khamoshi se matlab nahi matlab baato se hainn Din toh guzar hi jaaege masla raato se hainn - <em>Wajid shaikh</em> <span>Oct 23 2023</span></li>
-        
-            
-            <li>To regret is ordinary.
-To live in regrets, however,
-That&#39;s the catastrophic fate of an overthinker. - <em>Abel B</em> <span>Oct 12 2023</span></li>
-        
-            
-            <li>If it comes, let it come. If it goes, let it go. For as mush as there are reasons to be afraid, there are also reasons to be hopeful. - <em>Unknown</em> <span>Oct 5 2023</span></li>
-        
-            
-            <li>Look at you comforting others with the words you wish to hear. - <em>Unknown</em> <span>Oct 4 2023</span></li>
-        
-            
-            <li>the worst felling is that I don&#39;t know weather I should wait or give up. - <em>Unknown</em> <span>Oct 1 2023</span></li>
-        
-            
-            <li>That feeling when you have to distract yourself because if you don&#39;t you would start crying. - <em>Unknown</em> <span>Oct 1 2023</span></li>
-        
-            
-            <li>I choose to love you in silence because in silence I find no rejection, and in silence no one owns you but me. - <em>Rumi</em> <span>Sep 29 2023</span></li>
-        
-            
-            <li>Don&#39;t ignore the effort of someone who tries to keep in touch. It&#39;s not all the time someone cares. - <em>Unknown</em> <span>Sep 29 2023</span></li>
-        
-            
-            <li>Keep going not because you want to, but because you deserve to know what it feels like to never give up. - <em>Unknown</em> <span>Sep 29 2023</span></li>
-        
-            
-            <li>So how does it feel to know how to give love but not know how to accept it? Umm? &#34;Empty&#34; - <em>Unknown</em> <span>Sep 29 2023</span></li>
-        
-            
-            <li>How beautiful to find a heart that loves you, without asking you for anything, but to be okay. - <em>Khalil Gibran</em> <span>Sep 28 2023</span></li>
-        
-            
-            <li>You always win when you move with love and genuine intentions. Always. - <em>Unknown</em> <span>Sep 28 2023</span></li>
-        
-            
-            <li>Woh jo haste hai na baat baat par
-Gale lagakar dekhna ro padenge - <em>Unknown</em> <span>Sep 27 2023</span></li>
-        
-            
-            <li>I was always hungry for love. Just once, I wanted to know what it was like to get my fill of it - to be fed so much love I couldn&#39;t take any more. Just once. But they never gave that to me. Never, not once. - <em>Haruki Murakami</em> <span>Sep 26 2023</span></li>
-        
-            
-            <li>The most beautiful gift you can give someone is your time because you&#39;re giving them a part of your life that will never some back. - <em>Unknown</em> <span>Sep 25 2023</span></li>
-        
-            
-            <li>You where everywhere I went and in everything I felt. but you, the only way I saw you...
-was with my eyes closed. - <em>Unknown</em> <span>Sep 25 2023</span></li>
-        
-            
-            <li>A lot of people struggle with sleep because sleep requires peace. - <em>Unknown</em> <span>Sep 25 2023</span></li>
-        
-            
-            <li>You were unsure which pain is worse, the shock of what happened or the ache for what never will. - <em>Unknown</em> <span>Sep 19 2023</span></li>
-        
-            
-            <li>To love without condition, To talk without intention, To give without reason, care without expectations, That&#39;s the spirit of true love - <em>Lord Krishna</em> <span>Sep 16 2023</span></li>
-        
-            
-            <li>Pyaar, kiya nahi jata, Bas ho jata hai, ye ek ehsaas hai, thoda khubsoorat, thoda dard bhara. - <em>Unknown</em> <span>Sep 15 2023</span></li>
-        
-            
-            <li>When she says &#34;your so handsome&#34; but your drunk homie once said &#34;your presence alone would make the angels question there own perfection&#34; - <em>Unknown</em> <span>Sep 14 2023</span></li>
-        
-            
-            <li>Umar aap ko badaa nahi banati
-Zimmedariya Aap ko badaa banati hai - <em>Unknown</em> <span>Sep 14 2023</span></li>
-        
-            
-            <li>Good - <em>Jocko</em> <span>Sep 12 2023</span></li>
-        
-            
-            <li>She was in friendship, He was in love.
-She decided to share her secrets with him.
-He decided to share his life with her. - <em>Unknown</em> <span>Sep 9 2023</span></li>
-        
-            
-            <li>There was always enough to make me keep coming back to her, not quite enough to make her stay. - <em>Unknown</em> <span>Sep 9 2023</span></li>
-        
-            
-            <li>If someone wants to be with you, nothing will stop them from doing so. Love doesn&#39;t create excuses. - <em>Unknown</em> <span>Sep 9 2023</span></li>
-        
-            
-            <li>Travel with a boy alone and you will see his most caring side.... - <em>Unknown</em> <span>Sep 8 2023</span></li>
-        
-            
-            <li>There&#39;s 7 Billion 47 million people on the planet and I have the audacity to think I matter. - <em>Unknown</em> <span>Sep 6 2023</span></li>
-        
-            
-            <li>I want you, but I&#39;ll be quite following my dreams while you do too. Let the universe decide our fate because I&#39;m tired of all this trouble. - <em>Unknown</em> <span>Sep 3 2023</span></li>
-        
-            
-            <li>I never told you this, but sometimes I just sit there and imagine all the little scenarios of us in my head. Basic things like watching movies, cuddling, doing late night food runs, having deep conversations, taking random trips. I just miss you and want to be with you. - <em>Unknown</em> <span>Sep 3 2023</span></li>
-        
-            
-            <li>The best relationship has a gardener and a flower. The gardener nurtures and the flower blooms. - <em>Carole Radziwill</em> <span>Sep 2 2023</span></li>
-        
-            
-            <li>You never really stop loving someone,
-you just learn to live without them. - <em>Unknown</em> <span>Dec 8 2020</span></li>
-        
-            
-            <li>Intelligent girls are single. - <em>Unknown</em> <span>Dec 8 2020</span></li>
-        
-            
-            <li>Beauty catches attention but character catches the heart. - <em>Unknown</em> <span>Dec 2 2020</span></li>
-        
-            
-            <li>You ever crave for someone?
-Just for their presence. - <em>Unknown</em> <span>Nov 25 2020</span></li>
-        
-            
-            <li>Enjoy your own company instead of expecting someone else to make you happy. - <em>Mr. Bean</em> <span>Nov 23 2020</span></li>
-        
-            
-            <li>I may not promise a forever.
-But I&#39;ll make sure your smile doesn&#39;t fade away. - <em>Unknown</em> <span>Nov 18 2020</span></li>
-        
-            
-            <li>Why am I think of you when I know you&#39;re not thinking of me? - <em>Unknown</em> <span>Jul 29 2019</span></li>
-        
-            
-            <li>When I miss you, I re-read our old messages and smile like an idiot. - <em>Unknown</em> <span>Jul 3 2019</span></li>
-        
-            
-            <li>When I&#39;m alone, I think of so many things to say you, When I have a chance to tell you. I go speechless. - <em>Unknown</em> <span>Jul 3 2019</span></li>
-        
-            
-            <li>I know I dont deserve you, but I truly love you. - <em>Unknown</em> <span>Jun 18 2019</span></li>
-        
-            
-            <li>I still remember the feeling I felt when I first started talking to you. - <em>Unknown</em> <span>Jun 12 2019</span></li>
-        
-            
-            <li>The true measure of man isn&#39;t what he reveals to the world but what he hides from it. Keeping secrets is brutal business. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Don&#39;t chase women. You meet a lady, you express to her how she looks, and then go about your business. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>If you make people think they’re thinking, they’ll love you. But if you really make them think, they’ll hate you. - <em>Don Marquis</em> <span></span></li>
-        
-            
-            <li>You might be the sweetest peach on the tree, but some people just don&#39;t like peaches. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>But I always say, Keep your friends rich and your enemies rich, and wait to find out which is which. - <em>Ultron</em> <span></span></li>
-        
-            
-            <li>Keep your friends close, but your enemies closer. - <em>Micheal Corleone</em> <span></span></li>
-        
-            
-            <li>Motivate, Support, Inspire. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>There is always a friend who will listen to all your problems, but never tells you their own.. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Years of love have been forgot, in the hatred of minute. - <em>Edgar Allen Poe</em> <span></span></li>
-        
-            
-            <li>Isn’t it funny how someone could be on your mind every day and they could never know? - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>If you spend your time chasing butterflies, it will fly away. But if you spend your time building a beautiful garden, the butterflies will come to you. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Sometimes, the best way to stay close to someone you love is being just friends with them, even if it hurts. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Naseeb Naseeb ki baat hai, Naseeb Naseeb ki baat hai,  Koi Nafrat De Kar bhi pyaar pata hai, Toh koi bepanah mohabbat karke bhi Akela reh jata hain. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>We accept the love we think we deserve. - <em>Mr Anderson</em> <span></span></li>
-        
-            
-            <li>Hope. It is the only thing stronger than fear. - <em>President snow</em> <span></span></li>
-        
-            
-            <li>There are 2 kinds of people in the world, Hopeless romantics and realists. A realist just sees that face and packs it in with every other pretty girl they&#39;ve seen before. Hopeless romantic becomes convinced that god put them on earth to be with that one person. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Why do we close our eyes when we pray, when we cry, when we kiss, when we dream; because the most beautiful things in our life are not seen but only felt by the heart. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>But the most beautiful things in life are just not things. They’re people and places, memories and pictures. They’re feeling and moments and smiles and laughter. - <em></em> <span></span></li>
-        
-            
-            <li>My definition of fun had changed, I don&#39;t judge anyone else for the choices they have made, and I don&#39;t judge them for not understanding mine.
- I have found a truth within myself that longs for a deeper purpose.
- A single wise to live a life greater than myself. To serve others honorably, and to do my sou; spiritual justice. Some see boring, but maybe they just don&#39;t see what I see.... - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Why did you give up? I thought you really liked her. - I’m Sick of waiting patiently for someone that won’t even arrive. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Tum he guroor thi,
-Tum main he noor tha,
-Tum bhi bezaar thi,
-Mein bhi majboor tha,
-Ye bhi ek dor hai,
-Woh bhi ek dor tha,
-Ye teri khamoshi,
-To kya wo shor tha,
-Jisse tu mili wo koi or tha,
-Par apna milna bhi ab moujza,
-Mein tou gaano main zindagi gaata hu,
-Kya pata tumhein pasand ho konsa,
-Ao na - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>I didn&#39;t wanna fall in love or need someone. I really didn’t want anything….  But then you appeared… and I started wanting everything. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Terrify me, excite me, and I miss you. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Love is the perfect prison. Inescapable. - <em>Wilson Fisk</em> <span></span></li>
-        
-            
-            <li>I swear the plan was to stay single and grind, but then I saw her smile. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>It&#39;s not about having it all. It is about picking one person and making it work. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>When you feel sad, you can come to me. I’ll listen. I’ll never turn you away. I hear you, even when you don’t have the words to say. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Love is that which you do inspire of what you feel. Love is fighting for the good of someone else even if they never see the value or the sacrifice that you did to get love to them. Love sometimes hurts. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>I have a late night conversation with the moon. He tells me about the sun and I tell about her. But the moon will never have the sun And I will never have her. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>I think true unconditional love is like - do you love someone so much that you would love them even when they didn&#39;t love you anymore. That&#39;s unconditional love. - <em>Taylor Swift</em> <span></span></li>
-        
-            
-            <li>Fikar kar - dikha matt, Qadar kar - jata matt, Tu chahta hai na dosti bani rahe, Tu chahta hai na dosti bani rahe, Mohabbat kar - bata matt. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>All I know is we can&#39;t give up. Love is worth fighting for. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>All roads lead to you, even those I took to forget you. - <em>Mahmoud Darwish</em> <span></span></li>
-        
-            
-            <li>Forcing yourself not to talk to someone you love is one of the hardest things for a person to do. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>If I were to kiss you then go to hell I would. So than I can brag with the devil I saw heaver without even entering it. - <em>William Shakespare</em> <span></span></li>
-        
-            
-            <li>It&#39;s not that there is something special in you. It’s that there is nothing special without you. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>I fell in love with you. And I don’t know how, or why. But I did. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>I’m not in a relationship, It’s just… I’m in love with someone I can’t unlove. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>They asked,&#34; Do you Love her?” I said, &#34;Speak to her over my grave and watch how she brings me back to life.” - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Yea pyar bhi keya ajib chiz hai na,
-Jo tarasta hai use milta nahi,
-Or jisko milta hai,
-Use Kadar nahi hoti. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>We often want it so badly that we ruin it before it begins. Overthinking. Fantasizing. Imagining. Expecting. Worrying. Doubting. Just let it naturally evolve. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>I keep myself busy with things to do. But each time I pause, I think of you. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>## Lessons to learn:
-- Happiness is your personal choice,
-- Everything is temporary,
-- Life isn&#39;t fair,
-- Taking risks in life,
-- The power of being present,
-- The trap of overthinking,
-- Follow your passion and choose you career wisely,
-- Your mind is your greatest ally and adversary. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>8 Steps to Unfuck your life:
-- Cleanse Thy Earthly Vessel,
-- Order the Kingdom,
-- Venture Forth (outside),
-- Sweat,
-- Monitor thy Treasury,
-- Remove the Hooks,
-- Strategize,
-- Submit. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Saying how you feel will never ruin a real connection - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>There are many people better than me bro:
-There will always be people who are smarter than you,
-There will always be people who are stronger than you,
-There will always be people who are better than you,
-But the one thing, they can never be is you. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>When the plan was to focus on yourself and ghost everyone but then this one perfect girl comes into your life. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>400 Trillion to one that&#39;s how rear it is to be a human being.
-We are the lucky ones. We are the ones who get to die. Most people who could exist will never even be born.
-Take every occasion you can: smell the flowers, drink in the sunsets and the sunrise, and the majestic sky above you and celebrate life because you won the lottery. Most people will never even know there was a lottery. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>If you&#39;re a nerd, lift.
-If you are jacked, read.
-A jacked nerd is unstoppable. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Forgive you parents, relationships, everyone who has hurt you, yourself. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>I really had a bad day need to talk to someone....
-Talk to whom ? - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>I love you, in ways you&#39;re never been loved, for reasons you&#39;ve never been told, for longer than you think you deserved, and with more than you will ever know existed. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>You&#39;re husband material, not boyfriend material. You&#39;re a great man who knows how to treat a woman, and that scares girls that don&#39;t want to grow up, even if it is what&#39;s best for them. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>That&#39;s the thing about people who haven&#39;t been loves much.....
-They think about every kind gesture, a lightest touch of fingers, kind smiles, random acts of live, intimacy in every small thing done. 
-They find that love wherever they can because it was never given to them freely. 
-They don&#39;t ask for love, they search for it everywhere. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Best way to help someone is to listen to them. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Me in class thinking how all these people in here will grow up, get jobs, probably start a family and this class will be nothing more than a lost memory that will eventually be forgotten by all. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>I hate thinking &#34;okay let me show less love&#34; &#34;let me not care so much&#34; I HAT THAT FELLING. I should never have to feel that way. my purest form is loving hard and caring hard and nurturing hard, those are not negatives. - <em>Unknown</em> <span></span></li>
-        
-            
-            <li>Just go to sleep, they&#39;re smiling at someone else&#39;s text.... - <em>Unknown</em> <span></span></li>
-        
+      <li>
+        I Loved you<br />and i still do<br />just wanted passion from you<br />just
+        wanted what i gave you and then<br />I waited and waited.... -
+        <em>Billie Eilish</em> <span>Jul 13 2024</span>
+      </li>
+      <li>
+        May be one day you'll grow tired of the road and roll on back to me, and
+        when I blink my eyes into morning, your smile will be the only one I
+        see. - <em>Unknown</em> <span>Jul 12 2024</span>
+      </li>
+      <li>
+        Tum khudgarzi ki kya baat karte ho<br />Humne ek tarfa mohobbat ko bhi
+        shiddat se nibhaya hai - <em>Unknown</em> <span>Jul 12 2024</span>
+      </li>
+      <li>
+        A life is a tragedy in close up, and a comedy in long short. -
+        <em>Charlie Chaplin</em> <span>Jun 30 2024</span>
+      </li>
+      <li>
+        hamko neechay utar laingy log<br />ishq latka rahayga pankhay pe -
+        <em>ZIA Mashkoor</em> <span>Jun 28 2024</span>
+      </li>
+      <li>
+        " When I got enough confidence, the stage was gone.. When I was sure of
+        Losing, I won.When I needed People the most, they Left me. When I learnt
+        to dry my Tears, I found a shoulder to Cry on. When I mastered the Skill
+        of Hating, Someone started Loving me from the core of the Heart. And,
+        while waiting for Light for Hours when I fell asleep, the Sun came out..
+        That’s LIFE!! No matter what you Plan, you never know what Life has
+        Planned for you Success introduces you to the World. But Failure
+        introduces the World to you. Always be Happy!! Often when we lose Hope
+        and think this is the end God smiles from above and says, “Relax
+        Sweetheart; It’s just a Bend, not the End..!"” -
+        <em>William Shakespeare</em> <span>Jun 25 2024</span>
+      </li>
+      <li>
+        Your confidence isn't other people. Your confidence is your bad habits,
+        your distractions, your insecurities, your procrastinations, your lack
+        of discipline, your fear, and your ego. - <em>Unknown</em>
+        <span>Jun 24 2024</span>
+      </li>
+      <li>
+        Wo mili ese jese kabhi dur nahi hogi<br />Aur dur ese hui jese kabhi
+        mili hi nahi - <em>Unknown</em> <span>Jun 12 2024</span>
+      </li>
+      <li>
+        and I thought I was your forever. - <em>Arctic Monkeys</em>
+        <span>Jun 6 2024</span>
+      </li>
+      <li>
+        Do you think I have forgotten about you? - <em>The 1975</em>
+        <span>Jun 6 2024</span>
+      </li>
+      <li>
+        Always smiled, but was I happy inside? - <em>Kanya West</em>
+        <span>Jun 6 2024</span>
+      </li>
+      <li>
+        It hurts to love you but I still love you. - <em>Lana Del Rey</em>
+        <span>Jun 6 2024</span>
+      </li>
+      <li>
+        dil roya per aankhon<br />ko rone na diya.<br />saari saari raat jage
+        khud<br />ko sone na diya.<br />itna kartey hai yaad<br />aap ko.<br />par
+        is baat ka ehsas aap ko kabhi hone na diya!! - <em>Unknown</em>
+        <span>Jun 4 2024</span>
+      </li>
+      <li>
+        Emotions are always valid. But behavior is not. - <em>neethika</em>
+        <span>Jun 3 2024</span>
+      </li>
+      <li>
+        aur jab pasand ki cheez hi na mile<br />phir chahe jo mil jaye<br />kya
+        farak padhta hai - <em>Unknown</em> <span>Jun 3 2024</span>
+      </li>
+      <li>
+        Everything you love is very likely to be lost. But, In the end, Love
+        will return in a different way. - <em>Krafka</em>
+        <span>Jun 1 2024</span>
+      </li>
+      <li>
+        I can love only what I can place so high above me that I cannot reach
+        it. - <em>Krafka</em> <span>Jun 1 2024</span>
+      </li>
+      <li>
+        Anyone who keeps the ability to see beauty never grows old. -
+        <em>Krafka</em> <span>Jun 1 2024</span>
+      </li>
+      <li>
+        You are in my heart, you shall be in there forever. My greatest wish is
+        that you are happy you think of me. I am, when I think of you. -
+        <em>Unknown</em> <span>May 31 2024</span>
+      </li>
+      <li>
+        You must have chaos within you to give birth to a dancing star. -
+        <em>Friedrich Nietzsche</em> <span>May 30 2024</span>
+      </li>
+      <li>
+        Wo mili ese jese kabhi dur nahi hogi<br />Aur dur ese hui jese kabhi
+        mili hi nahi - <em>Unknown</em> <span>May 29 2024</span>
+      </li>
+      <li>
+        If you are kind, people may accuse you of selfish, ulterior motives. Be
+        kind anyway.<br />What you spend years building, someone can destroy
+        overnight. Build anyway.<br />The good you do today, people will often
+        forget tomorrow. Do good anyway.<br />Give the world the the best you
+        have and it may never be enough. Give the world the best you've got
+        anyway. - <em>orphanage in Calcutta, India.</em>
+        <span>May 20 2024</span>
+      </li>
+      <li>
+        You always have the right to have no opinion about this. You can always
+        think nothing about this. - <em>Aurelius</em> <span>May 18 2024</span>
+      </li>
+      <li>
+        If you want to be beautiful, make beautiful choices. -
+        <em>Epictetus</em> <span>May 18 2024</span>
+      </li>
+      <li>
+        A man can be himself only so long as he is alone, and if he does not
+        love solitude, he will not love freedom, for it is only when he is alone
+        that he is really free. - <em>Arthur Schopenhauer</em>
+        <span>May 18 2024</span>
+      </li>
+      <li>
+        I wasn't ready for the mud after the rain of your love. -
+        <em>Unknown</em> <span>May 18 2024</span>
+      </li>
+      <li>
+        We suffer more in imagination than reality. - <em>Seneca</em>
+        <span>May 18 2024</span>
+      </li>
+      <li>
+        We love ourselves more than other people but for some reason, we care
+        about their opinions more than our own. - <em>Marcus Aurelius</em>
+        <span>May 18 2024</span>
+      </li>
+      <li>
+        You have 2 ears but only one mouth for a reason. - <em>Zeno</em>
+        <span>May 18 2024</span>
+      </li>
+      <li>
+        I don't regret you but sometimes I wish I had walked away at the start
+        and left things to hello. because I let you become my happiness and
+        that's where I went wrong. - <em>Unknown</em> <span>May 15 2024</span>
+      </li>
+      <li>
+        You pulled me away from my own heart,<br />Replaced it with your own.<br />You
+        wrecked and recreated me.<br />I will forever be yours,<br />But you
+        will never be mine.<br /><br />I am just another art piece on the
+        wall,<br />In your museum.<br />Waiting to be admired by your eyes. -
+        <em>Feeling This Way - Ben Esqueda</em> <span>May 12 2024</span>
+      </li>
+      <li>
+        Everybody wants peace, Everybody wants peace until they realize that
+        peace means you changing your tone when someone irritates you. No longer
+        making everything an argument. Listening before responding. Setting your
+        boundaries high and understanding that everyone has their boundaries
+        too. Sone of you: you don't want to be in peace because to be in peace
+        means giving it to others. - <em>Unknown</em> <span>May 12 2024</span>
+      </li>
+      <li>
+        If one has a complaint against another forgiving each other as the Lord
+        has forgiven you, you also must forgive. - <em>Colossians 3:13</em>
+        <span>May 11 2024</span>
+      </li>
+      <li>
+        Sometimes I wonder why the universe let me met you.<br />Why did it gave
+        me the chance to feel you presence.<br />To know you, understand you,
+        and fall for you.<br />Even though in the end, I know you will be the
+        reason for my biggest sorrow.<br />I mean, how can the universe be so
+        cruel?<br />Why would it gave me access to unrequited feelings? -
+        <em>A Story of Unrequited Love</em> <span>May 11 2024</span>
+      </li>
+      <li>
+        you should've left me alone if I wasn't what you wanted.<br />How stupid
+        of me was it to think that you actually saw something in me?<br />Taking
+        to someone every single day for hours can be pretty distractive because
+        there will come a day where you don't speak at all, and it's going to be
+        the loneliest feeling in the world.<br />that was pointless we could've
+        just stayed strangers. - <em>dyingful</em> <span>May 11 2024</span>
+      </li>
+      <li>
+        Father forgive them for they do not know what they are doing. -
+        <em>Luke 23:24</em> <span>May 11 2024</span>
+      </li>
+      <li>
+        True love keeps no record of wrongs. - <em>Unknown</em>
+        <span>May 11 2024</span>
+      </li>
+      <li>
+        You'll keep forgetting the one you love till you hate them. -
+        <em>Unknown</em> <span>May 10 2024</span>
+      </li>
+      <li>
+        I grieve and they blame me without knowing my reasons, like it was my
+        choice to feel this deep sorrow. - <em>Unknown</em>
+        <span>May 10 2024</span>
+      </li>
+      <li>
+        Truly, the grief you left me with is more loyal that you. -
+        <em>Unknown</em> <span>May 10 2024</span>
+      </li>
+      <li>
+        How much do I have to wait for you to find me? - <em>Unknown</em>
+        <span>May 10 2024</span>
+      </li>
+      <li>
+        People change when they hurt enough they have to, when they see enough
+        they're inspired to, when they see learn enough that they want to, and
+        when they receive enough that they're able to. -
+        <em>John C. Maxwell</em> <span>May 9 2024</span>
+      </li>
+      <li>
+        To whom do I owe the biggest apology? No one's been crueler than I've
+        been to me. - <em>"Sorry to Myself", Under Rug Swept</em>
+        <span>May 5 2024</span>
+      </li>
+      <li>
+        There is an aching void in my heart which I am convinced the world can
+        never fill. - <em>Unknown</em> <span>May 5 2024</span>
+      </li>
+      <li>
+        Because in the end you are really alone, whatever you do. -
+        <em>Marina Abramovie</em> <span>May 5 2024</span>
+      </li>
+      <li>
+        It's exciting when you find parts of yourself in someone else. -
+        <em>Annaka Silvia</em> <span>May 5 2024</span>
+      </li>
+      <li>
+        I learned that people can easily forget that others are human -
+        <em>Stanford Prison Experiment (1971)</em> <span>May 5 2024</span>
+      </li>
+      <li>
+        You need to learn to be last to speak. - <em>Unknown</em>
+        <span>May 4 2024</span>
+      </li>
+      <li>
+        all of man's problems arise because he cannot sit by himself in a room
+        for thirty minutes alone. - <em>Naval</em> <span>May 3 2024</span>
+      </li>
+      <li>
+        Tum yed nahi karty,<br />Aur ham bhula nahi sakty.<br />Tum hasa nahi
+        sakty,<br />Hum rola nahi sakty.<br />Itni khubsurat Muhabbat hy
+        hamari<br />kh tum jan nahi sakty,<br />Aur ham bata nahi sakty. -
+        <em>Unknown</em> <span>May 3 2024</span>
+      </li>
+      <li>
+        I challenge you.<br />To be as kind as you can, for as long as you
+        can.<br />To be as grateful as you can, for as long as you can.<br />To
+        be as positive as you can, for as long as you can.<br />
+        - <em>Unknown</em> <span>Apr 29 2024</span>
+      </li>
+      <li>
+        If you don't know what to live, then just live for me.<br />The very
+        existence of someone in the world is hope. - <em>Hua Cheng</em>
+        <span>Apr 22 2024</span>
+      </li>
+      <li>
+        An Intelligent person knows just exactly how Intelligent they are and
+        what they do not know. - <em>Prakhar Gupta</em> <span>Apr 15 2024</span>
+      </li>
+      <li>
+        Sirf itna pyar kat jitna tu seh sakey.<br />Bachna bhi padey to Zinda
+        reh sakey. - <em>Unknown</em> <span>Apr 11 2024</span>
+      </li>
+      <li>
+        If she's amazing, she won't be easy. If she's easy, she won't be
+        amazing. If she's worth it, you won't give up,. If you give up, Your not
+        worthy.<br />Truth is, everyone is going to hurt you, you just have to
+        find the one worth hurting for. - <em>Unknown</em>
+        <span>Apr 11 2024</span>
+      </li>
+      <li>
+        Wisdom says I am nothing.<br />Love says I am everything.<br />And it's
+        between these two that my life flows. -
+        <em>Indian sage, Sri Nisargadatta Maharaj</em> <span>Apr 9 2024</span>
+      </li>
+      <li>
+        You are the average of the five persons you spend the most time with. -
+        <em>Jim Rohn</em> <span>Apr 7 2024</span>
+      </li>
+      <li>
+        Perfectionism is a disease. Procrastination is a disease. ACTION is the
+        cure. - <em>Richie Norton</em> <span>Apr 7 2024</span>
+      </li>
+      <li>
+        We most all suffer from two pains: the pain of discipline or the pain of
+        regret. - <em>Jim Rohn</em> <span>Apr 7 2024</span>
+      </li>
+      <li>
+        Being alone is much worse than getting hurt. - <em>Loffy</em>
+        <span>Apr 2 2024</span>
+      </li>
+      <li>
+        Have a mind that is open to everything.....<br />and attached to
+        nothing. - <em>Unknown</em> <span>Apr 2 2024</span>
+      </li>
+      <li>
+        I didn't fall for you. I looked down, saw the distance, and I jumped. -
+        <em>Blake Auden</em> <span>Feb 2 2024</span>
+      </li>
+      <li>
+        We leave doors open for people who'll never knock again. Stubborn human
+        heart. Living for the maybes and what ifs. Hoping until the day it dies.
+        - <em>Unknown</em> <span>Feb 2 2024</span>
+      </li>
+      <li>
+        Maybe, forever was a word meant for memories and not people. -
+        <em>Unknown</em> <span>Feb 1 2024</span>
+      </li>
+      <li>
+        Lets heal so we can stop accidentally hurting people we want to love
+        because we are projecting our own wounds on to them -
+        <em>Steph Feels</em> <span>Feb 1 2024</span>
+      </li>
+      <li>
+        Nobody agrees but friendships are more twisted than romance. Romance
+        gives you right, romance gives you authority, your lover is just yours
+        by oath. That's not how it goes between two people who lives on
+        convenience not desperation. - <em>Unknown</em> <span>Jan 21 2024</span>
+      </li>
+      <li>
+        Alfaaz mein kahan aati hai dil ki khaifiyat,<br />Mehsoos jo hota hai,
+        btaya nhi jata. - <em>Unknown</em> <span>Jan 21 2024</span>
+      </li>
+      <li>
+        When you come back you will not be you. And I may not be I. -
+        <em>EM Forster</em> <span>Jan 20 2024</span>
+      </li>
+      <li>
+        reset, restart, refocus. - <em>Unknown</em> <span>Jan 18 2024</span>
+      </li>
+      <li>
+        Not a single person has tried to fight for me to stay in their life, yet
+        I fought for everyone I lost. This is my pain. - <em>Unknown</em>
+        <span>Dec 25 2023</span>
+      </li>
+      <li>Holding that 1% hope. - <em>Unknown</em> <span>Dec 24 2023</span></li>
+      <li>
+        A focused fool can accomplish more than a distracted genius. -
+        <em>Unknown</em> <span>Dec 24 2023</span>
+      </li>
+      <li>
+        The wiser you are, the more worries you have.<br />The more you have,
+        the more it hurts. - <em>Ecclesiastes 1:18</em> <span>Dec 2 2023</span>
+      </li>
+      <li>
+        I'm paradoxical.<br />I like to be happy but I think about sad things
+        all the time. I don't really like myself but I love the person I've
+        become.<br />I say I don't care but I just care too much, deep into my
+        bones. <br />I crave attention yet I reject everything that comes my
+        way. <br />I healed people, but I broke my own heart trying to fix them.
+        <br />I love to listen, but I never tell them what's inside me.<br />A
+        living contradiction. That's what I am. - <em>Unknown</em>
+        <span>Nov 22 2023</span>
+      </li>
+      <li>
+        As long as you've got me. I've got you. - <em>Unknown</em>
+        <span>Nov 22 2023</span>
+      </li>
+      <li>
+        Hum baney he thy tabaah hone ko,<br />Tera milna to aek bahana tha. -
+        <em>Jaun Elia</em> <span>Nov 22 2023</span>
+      </li>
+      <li>
+        The most beautiful things in life are not things. They're people, places
+        and memories. - <em>Unknown</em> <span>Nov 20 2023</span>
+      </li>
+      <li>
+        Love is patient, love is kind. It does not envy, it does not boast, it
+        is not proud. It does not dishonor others, it is not self-seeking, it is
+        not easily angered, it keeps no record of wrongs. Love does not delight
+        in evil but rejoices with the truth. It always protects, always trusts,
+        always hopes, always perseveres. - <em>Unknown</em>
+        <span>Nov 20 2023</span>
+      </li>
+      <li>
+        Almost dead yesterday, maybe dead tomorrow, but alive, gloriously alive,
+        today. - <em>Robert Jordan</em> <span>Nov 20 2023</span>
+      </li>
+      <li>
+        Sometimes all you need is twenty seconds of insane courage, just
+        literally twenty seconds of embarrassing bravery. And I promise you,
+        something great will come of it. - <em>Unknown</em>
+        <span>Nov 16 2023</span>
+      </li>
+      <li>
+        And tonight, I guess, I miss you.<br />But please don't ask me why.<br />I've
+        tried to kill the feeling, but it doesn't want to die. -
+        <em>Lauren Levi</em> <span>Nov 16 2023</span>
+      </li>
+      <li>
+        People want to be acknowledged, accepted, and appreciated. It takes
+        almost nothing to give them that, but empires have risen and fell
+        because of it. People will be so happy that you've given it, even if
+        they know they're being manipulated, they'll ignore the manipulation for
+        the sake of what you're giving them. - <em>Unknown</em>
+        <span>Nov 15 2023</span>
+      </li>
+      <li>
+        Might take you 6 more months, might take-you 2 more years, might take
+        you 5, you're going to get it done. You're going to get where you want
+        to be. - <em>Unknown</em> <span>Nov 9 2023</span>
+      </li>
+      <li>
+        To the girls who dream of meeting a prince but end up falling for the
+        misunderstood villain. - <em>Unknown</em> <span>Nov 8 2023</span>
+      </li>
+      <li>
+        The Attack on Titan chapters are 139 because 120 in Japan is the number
+        for freedom, this means Eren will never reach it. - <em>Unknown</em>
+        <span>Nov 7 2023</span>
+      </li>
+      <li>
+        In her mind, he was dead.<br />In his, she was the reason to keep going.
+        - <em>Unknown</em> <span>Nov 6 2023</span>
+      </li>
+      <li>
+        I've said it before and will say it again. You can seem like a
+        millionaire to one person and a homeless person to the next. The ants
+        think you are a giant and the trees don't even notice you. You think you
+        have a boring life, but the next person might be striving for your
+        lifestyle. Comparison is the thief of joy so just stay kind and keep
+        living life. Life is all just a big game of perspective -
+        <em>Unknown</em> <span>Nov 4 2023</span>
+      </li>
+      <li>
+        Be honest when trouble comes, be simple when money comes, be humble when
+        you get authority, and be calm when angry, this is called management of
+        life. - <em>Lord Krishna</em> <span>Nov 3 2023</span>
+      </li>
+      <li>
+        Trust me when I say be the person who cares. Be the person who makes the
+        effort, the person who loves without hesitation. Be the person who shows
+        up for others. Because there is nothing stronger than someone who
+        continues to show kindness in a world that hasn't always been kind to
+        them. - <em>Unknown</em> <span>Nov 3 2023</span>
+      </li>
+      <li>
+        you're that "nothing" when people ask me what I'm thinking about. -
+        <em>akhira</em> <span>Oct 24 2023</span>
+      </li>
+      <li>
+        There is no shame in being hungry for another person. There is no shame
+        in wanting very much to share your life with somebody. -
+        <em>Augusten Burroughs</em> <span>Oct 23 2023</span>
+      </li>
+      <li>
+        It's not about silence. It's about the meaning in words.<br />Days will
+        pass anyway, the issue lies in the nights. - <em>Wajid shaikh</em>
+        <span>Oct 23 2023</span>
+      </li>
+      <li>
+        Humble enough to know I can be replaced, but wise enough to know ain't
+        nobody else like me. - <em>Unknown</em> <span>Oct 23 2023</span>
+      </li>
+      <li>
+        Khamoshi se matlab nahi matlab baato se hainn Din toh guzar hi jaaege
+        masla raato se hainn - <em>Wajid shaikh</em> <span>Oct 23 2023</span>
+      </li>
+      <li>
+        To regret is ordinary.<br />To live in regrets, however,<br />That's the
+        catastrophic fate of an overthinker. - <em>Abel B</em>
+        <span>Oct 12 2023</span>
+      </li>
+      <li>
+        If it comes, let it come. If it goes, let it go. For as mush as there
+        are reasons to be afraid, there are also reasons to be hopeful. -
+        <em>Unknown</em> <span>Oct 5 2023</span>
+      </li>
+      <li>
+        Look at you comforting others with the words you wish to hear. -
+        <em>Unknown</em> <span>Oct 4 2023</span>
+      </li>
+      <li>
+        the worst felling is that I don't know weather I should wait or give up.
+        - <em>Unknown</em> <span>Oct 1 2023</span>
+      </li>
+      <li>
+        That feeling when you have to distract yourself because if you don't you
+        would start crying. - <em>Unknown</em> <span>Oct 1 2023</span>
+      </li>
+      <li>
+        Keep going not because you want to, but because you deserve to know what
+        it feels like to never give up. - <em>Unknown</em>
+        <span>Sep 29 2023</span>
+      </li>
+      <li>
+        Don't ignore the effort of someone who tries to keep in touch. It's not
+        all the time someone cares. - <em>Unknown</em> <span>Sep 29 2023</span>
+      </li>
+      <li>
+        So how does it feel to know how to give love but not know how to accept
+        it? Umm? "Empty" - <em>Unknown</em> <span>Sep 29 2023</span>
+      </li>
+      <li>
+        I choose to love you in silence because in silence I find no rejection,
+        and in silence no one owns you but me. - <em>Rumi</em>
+        <span>Sep 29 2023</span>
+      </li>
+      <li>
+        You always win when you move with love and genuine intentions. Always. -
+        <em>Unknown</em> <span>Sep 28 2023</span>
+      </li>
+      <li>
+        How beautiful to find a heart that loves you, without asking you for
+        anything, but to be okay. - <em>Khalil Gibran</em>
+        <span>Sep 28 2023</span>
+      </li>
+      <li>
+        Woh jo haste hai na baat baat par<br />Gale lagakar dekhna ro padenge -
+        <em>Unknown</em> <span>Sep 27 2023</span>
+      </li>
+      <li>
+        I was always hungry for love. Just once, I wanted to know what it was
+        like to get my fill of it - to be fed so much love I couldn't take any
+        more. Just once. But they never gave that to me. Never, not once. -
+        <em>Haruki Murakami</em> <span>Sep 26 2023</span>
+      </li>
+      <li>
+        The most beautiful gift you can give someone is your time because you're
+        giving them a part of your life that will never some back. -
+        <em>Unknown</em> <span>Sep 25 2023</span>
+      </li>
+      <li>
+        You where everywhere I went and in everything I felt. but you, the only
+        way I saw you...<br />was with my eyes closed. - <em>Unknown</em>
+        <span>Sep 25 2023</span>
+      </li>
+      <li>
+        A lot of people struggle with sleep because sleep requires peace. -
+        <em>Unknown</em> <span>Sep 25 2023</span>
+      </li>
+      <li>
+        You were unsure which pain is worse, the shock of what happened or the
+        ache for what never will. - <em>Unknown</em> <span>Sep 19 2023</span>
+      </li>
+      <li>
+        To love without condition, To talk without intention, To give without
+        reason, care without expectations, That's the spirit of true love -
+        <em>Lord Krishna</em> <span>Sep 16 2023</span>
+      </li>
+      <li>
+        Pyaar, kiya nahi jata, Bas ho jata hai, ye ek ehsaas hai, thoda
+        khubsoorat, thoda dard bhara. - <em>Unknown</em>
+        <span>Sep 15 2023</span>
+      </li>
+      <li>
+        Umar aap ko badaa nahi banati<br />Zimmedariya Aap ko badaa banati hai -
+        <em>Unknown</em> <span>Sep 14 2023</span>
+      </li>
+      <li>
+        When she says "your so handsome" but your drunk homie once said "your
+        presence alone would make the angels question there own perfection" -
+        <em>Unknown</em> <span>Sep 14 2023</span>
+      </li>
+      <li>Good - <em>Jocko</em> <span>Sep 12 2023</span></li>
+      <li>
+        There was always enough to make me keep coming back to her, not quite
+        enough to make her stay. - <em>Unknown</em> <span>Sep 9 2023</span>
+      </li>
+      <li>
+        She was in friendship, He was in love.<br />She decided to share her
+        secrets with him.<br />He decided to share his life with her. -
+        <em>Unknown</em> <span>Sep 9 2023</span>
+      </li>
+      <li>
+        If someone wants to be with you, nothing will stop them from doing so.
+        Love doesn't create excuses. - <em>Unknown</em> <span>Sep 9 2023</span>
+      </li>
+      <li>
+        Travel with a boy alone and you will see his most caring side.... -
+        <em>Unknown</em> <span>Sep 8 2023</span>
+      </li>
+      <li>
+        There's 7 Billion 47 million people on the planet and I have the
+        audacity to think I matter. - <em>Unknown</em> <span>Sep 6 2023</span>
+      </li>
+      <li>
+        I never told you this, but sometimes I just sit there and imagine all
+        the little scenarios of us in my head. Basic things like watching
+        movies, cuddling, doing late night food runs, having deep conversations,
+        taking random trips. I just miss you and want to be with you. -
+        <em>Unknown</em> <span>Sep 3 2023</span>
+      </li>
+      <li>
+        I want you, but I'll be quite following my dreams while you do too. Let
+        the universe decide our fate because I'm tired of all this trouble. -
+        <em>Unknown</em> <span>Sep 3 2023</span>
+      </li>
+      <li>
+        The best relationship has a gardener and a flower. The gardener nurtures
+        and the flower blooms. - <em>Carole Radziwill</em>
+        <span>Sep 2 2023</span>
+      </li>
+      <li>
+        You never really stop loving someone,<br />you just learn to live
+        without them. - <em>Unknown</em> <span>Dec 8 2020</span>
+      </li>
+      <li>
+        Intelligent girls are single. - <em>Unknown</em> <span>Dec 8 2020</span>
+      </li>
+      <li>
+        Beauty catches attention but character catches the heart. -
+        <em>Unknown</em> <span>Dec 2 2020</span>
+      </li>
+      <li>
+        You ever crave for someone?<br />Just for their presence. -
+        <em>Unknown</em> <span>Nov 25 2020</span>
+      </li>
+      <li>
+        Enjoy your own company instead of expecting someone else to make you
+        happy. - <em>Mr. Bean</em> <span>Nov 23 2020</span>
+      </li>
+      <li>
+        I may not promise a forever.<br />But I'll make sure your smile doesn't
+        fade away. - <em>Unknown</em> <span>Nov 18 2020</span>
+      </li>
+      <li>
+        Why am I think of you when I know you're not thinking of me? -
+        <em>Unknown</em> <span>Jul 29 2019</span>
+      </li>
+      <li>
+        When I miss you, I re-read our old messages and smile like an idiot. -
+        <em>Unknown</em> <span>Jul 3 2019</span>
+      </li>
+      <li>
+        When I'm alone, I think of so many things to say you, When I have a
+        chance to tell you. I go speechless. - <em>Unknown</em>
+        <span>Jul 3 2019</span>
+      </li>
+      <li>
+        I know I dont deserve you, but I truly love you. - <em>Unknown</em>
+        <span>Jun 18 2019</span>
+      </li>
+      <li>
+        I still remember the feeling I felt when I first started talking to you.
+        - <em>Unknown</em> <span>Jun 12 2019</span>
+      </li>
+      <li>
+        The true measure of man isn't what he reveals to the world but what he
+        hides from it. Keeping secrets is brutal business. - <em>Unknown</em>
+        <span></span>
+      </li>
+      <li>
+        Don't chase women. You meet a lady, you express to her how she looks,
+        and then go about your business. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        If you make people think they’re thinking, they’ll love you. But if you
+        really make them think, they’ll hate you. - <em>Don Marquis</em>
+        <span></span>
+      </li>
+      <li>
+        But I always say, Keep your friends rich and your enemies rich, and wait
+        to find out which is which. - <em>Ultron</em> <span></span>
+      </li>
+      <li>
+        Keep your friends close, but your enemies closer. -
+        <em>Micheal Corleone</em> <span></span>
+      </li>
+      <li>Motivate, Support, Inspire. - <em>Unknown</em> <span></span></li>
+      <li>
+        But the most beautiful things in life are just not things. They’re
+        people and places, memories and pictures. They’re feeling and moments
+        and smiles and laughter. - <em></em> <span></span>
+      </li>
+      <li>
+        My definition of fun had changed, I don't judge anyone else for the
+        choices they have made, and I don't judge them for not understanding
+        mine.<br />
+        I have found a truth within myself that longs for a deeper purpose.<br />
+        A single wise to live a life greater than myself. To serve others
+        honorably, and to do my sou; spiritual justice. Some see boring, but
+        maybe they just don't see what I see.... - <em>Unknown</em>
+        <span></span>
+      </li>
+      <li>
+        There is always a friend who will listen to all your problems, but never
+        tells you their own.. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Years of love have been forgot, in the hatred of minute. -
+        <em>Edgar Allen Poe</em> <span></span>
+      </li>
+      <li>
+        Isn’t it funny how someone could be on your mind every day and they
+        could never know? - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Why did you give up? I thought you really liked her. - I’m Sick of
+        waiting patiently for someone that won’t even arrive. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Tum he guroor thi,<br />Tum main he noor tha,<br />Tum bhi bezaar
+        thi,<br />Mein bhi majboor tha,<br />Ye bhi ek dor hai,<br />Woh bhi ek
+        dor tha,<br />Ye teri khamoshi,<br />To kya wo shor tha,<br />Jisse tu
+        mili wo koi or tha,<br />Par apna milna bhi ab moujza,<br />Mein tou
+        gaano main zindagi gaata hu,<br />Kya pata tumhein pasand ho konsa,<br />Ao
+        na - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        I didn't wanna fall in love or need someone. I really didn’t want
+        anything….&nbsp; But then you appeared… and I started wanting
+        everything. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Terrify me, excite me, and I miss you. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Love is the perfect prison. Inescapable. - <em>Wilson Fisk</em>
+        <span></span>
+      </li>
+      <li>
+        I swear the plan was to stay single and grind, but then I saw her smile.
+        - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        It's not about having it all. It is about picking one person and making
+        it work. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        When you feel sad, you can come to me. I’ll listen. I’ll never turn you
+        away. I hear you, even when you don’t have the words to say. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Love is that which you do inspire of what you feel. Love is fighting for
+        the good of someone else even if they never see the value or the
+        sacrifice that you did to get love to them. Love sometimes hurts. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        I have a late night conversation with the moon. He tells me about the
+        sun and I tell about her. But the moon will never have the sun And I
+        will never have her. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        I think true unconditional love is like - do you love someone so much
+        that you would love them even when they didn't love you anymore. That's
+        unconditional love. - <em>Taylor Swift</em> <span></span>
+      </li>
+      <li>
+        Fikar kar - dikha matt, Qadar kar - jata matt, Tu chahta hai na dosti
+        bani rahe, Tu chahta hai na dosti bani rahe, Mohabbat kar - bata matt. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        All I know is we can't give up. Love is worth fighting for. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        All roads lead to you, even those I took to forget you. -
+        <em>Mahmoud Darwish</em> <span></span>
+      </li>
+      <li>
+        Forcing yourself not to talk to someone you love is one of the hardest
+        things for a person to do. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        If I were to kiss you then go to hell I would. So than I can brag with
+        the devil I saw heaver without even entering it. -
+        <em>William Shakespare</em> <span></span>
+      </li>
+      <li>
+        It's not that there is something special in you. It’s that there is
+        nothing special without you. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        I fell in love with you. And I don’t know how, or why. But I did. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        I’m not in a relationship, It’s just… I’m in love with someone I can’t
+        unlove. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        They asked," Do you Love her?” I said, "Speak to her over my grave and
+        watch how she brings me back to life.” - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Yea pyar bhi keya ajib chiz hai na,<br />Jo tarasta hai use milta
+        nahi,<br />Or jisko milta hai,<br />Use Kadar nahi hoti. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        We often want it so badly that we ruin it before it begins.
+        Overthinking. Fantasizing. Imagining. Expecting. Worrying. Doubting.
+        Just let it naturally evolve. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        I keep myself busy with things to do. But each time I pause, I think of
+        you. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        ## Lessons to learn:<br />- Happiness is your personal choice,<br />-
+        Everything is temporary,<br />- Life isn't fair,<br />- Taking risks in
+        life,<br />- The power of being present,<br />- The trap of
+        overthinking,<br />- Follow your passion and choose you career
+        wisely,<br />- Your mind is your greatest ally and adversary. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        8 Steps to Unfuck your life:<br />- Cleanse Thy Earthly Vessel,<br />-
+        Order the Kingdom,<br />- Venture Forth (outside),<br />- Sweat,<br />-
+        Monitor thy Treasury,<br />- Remove the Hooks,<br />- Strategize,<br />-
+        Submit. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Saying how you feel will never ruin a real connection -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        There are many people better than me bro:<br />There will always be
+        people who are smarter than you,<br />There will always be people who
+        are stronger than you,<br />There will always be people who are better
+        than you,<br />But the one thing, they can never be is you. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        When the plan was to focus on yourself and ghost everyone but then this
+        one perfect girl comes into your life. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        400 Trillion to one that's how rear it is to be a human being.<br />We
+        are the lucky ones. We are the ones who get to die. Most people who
+        could exist will never even be born.<br />Take every occasion you can:
+        smell the flowers, drink in the sunsets and the sunrise, and the
+        majestic sky above you and celebrate life because you won the lottery.
+        Most people will never even know there was a lottery. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        If you're a nerd, lift.<br />If you are jacked, read.<br />A jacked nerd
+        is unstoppable. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Forgive you parents, relationships, everyone who has hurt you, yourself.
+        - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        I really had a bad day need to talk to someone....<br />Talk to whom ? -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        I love you, in ways you're never been loved, for reasons you've never
+        been told, for longer than you think you deserved, and with more than
+        you will ever know existed. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        You're husband material, not boyfriend material. You're a great man who
+        knows how to treat a woman, and that scares girls that don't want to
+        grow up, even if it is what's best for them. - <em>Unknown</em>
+        <span></span>
+      </li>
+      <li>
+        That's the thing about people who haven't been loves much.....<br />They
+        think about every kind gesture, a lightest touch of fingers, kind
+        smiles, random acts of live, intimacy in every small thing done.
+        <br />They find that love wherever they can because it was never given
+        to them freely. <br />They don't ask for love, they search for it
+        everywhere. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Best way to help someone is to listen to them. - <em>Unknown</em>
+        <span></span>
+      </li>
+      <li>
+        Me in class thinking how all these people in here will grow up, get
+        jobs, probably start a family and this class will be nothing more than a
+        lost memory that will eventually be forgotten by all. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        I hate thinking "okay let me show less love" "let me not care so much" I
+        HAT THAT FELLING. I should never have to feel that way. my purest form
+        is loving hard and caring hard and nurturing hard, those are not
+        negatives. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        There are 2 kinds of people in the world, Hopeless romantics and
+        realists. A realist just sees that face and packs it in with every other
+        pretty girl they've seen before. Hopeless romantic becomes convinced
+        that god put them on earth to be with that one person. -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Just go to sleep, they're smiling at someone else's text.... -
+        <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Hope. It is the only thing stronger than fear. -
+        <em>President snow</em> <span></span>
+      </li>
+      <li>
+        Why do we close our eyes when we pray, when we cry, when we kiss, when
+        we dream; because the most beautiful things in our life are not seen but
+        only felt by the heart. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        We accept the love we think we deserve. - <em>Mr Anderson</em>
+        <span></span>
+      </li>
+      <li>
+        Naseeb Naseeb ki baat hai, Naseeb Naseeb ki baat hai,&nbsp; Koi Nafrat
+        De Kar bhi pyaar pata hai, Toh koi bepanah mohabbat karke bhi Akela reh
+        jata hain. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        Sometimes, the best way to stay close to someone you love is being just
+        friends with them, even if it hurts. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        If you spend your time chasing butterflies, it will fly away. But if you
+        spend your time building a beautiful garden, the butterflies will come
+        to you. - <em>Unknown</em> <span></span>
+      </li>
+      <li>
+        You might be the sweetest peach on the tree, but some people just don't
+        like peaches. - <em>Unknown</em> <span></span>
+      </li>
+      <br />
+      <br />
     </ul>
 
     <script>
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
         }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
 
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == " ") c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0)
+            return c.substring(nameEQ.length, c.length);
         }
+        return null;
+      }
 
-        function fillFormFields() {
-            var author = getCookie('author');
-            var date = getCookie('date');
-            if (author) {
-                document.getElementById('author').value = author;
-            }
-            if (date) {
-                document.getElementById('date').value = date;
-            }
+      function fillFormFields() {
+        var author = getCookie("author");
+        var date = getCookie("date");
+        if (author) {
+          document.getElementById("author").value = author;
         }
+        if (date) {
+          document.getElementById("date").value = date;
+        }
+      }
 
-        window.onload = function () {
-            fillFormFields();
-        };
+      window.onload = function () {
+        fillFormFields();
+      };
 
-        document.getElementById('quoteForm').addEventListener('submit', function (event) {
-            setCookie('author', document.getElementById('author').value, 7); // Store for 7 days
-            setCookie('date', document.getElementById('date').value, 7); // Store for 7 days
+      document
+        .getElementById("quoteForm")
+        .addEventListener("submit", function (event) {
+          setCookie("author", document.getElementById("author").value, 7); // Store for 7 days
+          setCookie("date", document.getElementById("date").value, 7); // Store for 7 days
         });
 
-        $(document).ready(function(){
-            $("#addQuote").click(function(){
-                $("#addQuote").css('opacity', '1');
-                $("#quoteForm").fadeIn();
-            });
+      $(document).ready(function () {
+        $("#addQuote").click(function () {
+          $("#addQuote").css("opacity", "1");
+          $("#quoteForm").fadeIn();
         });
+      });
 
-        $('body').find('*').each(function() {
-        $(this).html(function(i, html) {
-            return html.replace(/\n/g, '<br>');
+      $("body")
+        .find("*")
+        .each(function () {
+          $(this).html(function (i, html) {
+            return html.replace(/\n/g, "<br>");
+          });
         });
-    });
     </script>
-</body>
+  </body>
 </html>
